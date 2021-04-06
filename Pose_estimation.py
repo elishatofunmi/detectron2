@@ -85,6 +85,7 @@ for _, i in enumerate(tqdm(range(TotalFrames))):
 
         appendFrame = detectBox(detections, frame)
         # print(appendFrame.shape)
+        appendFrame = cv2.cvtColor(appendFrame, cv2.COLOR_BGR2RGB)
         out.write(appendFrame)
 
         # cv2.imshow('frame', frame)
